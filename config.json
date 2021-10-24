@@ -61,7 +61,7 @@
 
 
 
-//---------------- outbounds start ---------------------- ///
+//---------------- shadowsocks   outbounds start ---------------------- ///
 
   "outbounds": [
     {
@@ -83,6 +83,49 @@
         "network": "tcp"
       },
 
+
+//---------------- outbounds end ---------------------- ///
+
+
+
+
+//---------------- vmess   outbounds start ---------------------- ///
+
+
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "you ip",
+            "port": you port,
+            "users": [
+              {
+                "id": "you uuid",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "aes-128-gcm"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "you serve name"
+        },
+        "wsSettings": {
+          "path": "you path",
+          "headers": {
+            "Host": "you host name"
+          }
+        }
+      },
 
 //---------------- outbounds end ---------------------- ///
 
