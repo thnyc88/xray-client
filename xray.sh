@@ -14,7 +14,7 @@
 
 # You can set this variable whatever you want in shell session right before running this script by issuing:
 # export DAT_PATH='/usr/local/share/xray'
-DAT_PATH=${DAT_PATH:-/usr/local/share/xray}
+DAT_PATH=${DAT_PATH:-/usr/share/xray}
 
 # You can set this variable whatever you want in shell session right before running this script by issuing:
 # export JSON_PATH='/usr/local/etc/xray'
@@ -659,10 +659,8 @@ install_geodata() {
       exit 1
     fi
   }
-#local download_link_geoip="https://github.com/v2fly/geoip/releases/latest/download/geoip.dat"
-#local download_link_geosite="https://github.com/v2fly/geoip/releases/latest/download/geoip.dat"
   local download_link_geoip="https://github.com/v2fly/geoip/releases/latest/download/geoip.dat"
-  local download_link_geosite="https://github.com/v2ray/domain-list-community/raw/release/dlc.dat"
+  local download_link_geosite="https://github.com/v2fly/domain-list-community/releases/latest/download/dlc.dat"
   local file_ip='geoip.dat'
   local file_dlc='dlc.dat'
   local file_site='geosite.dat'
@@ -906,3 +904,4 @@ main() {
 }
 
 main "$@"
+
